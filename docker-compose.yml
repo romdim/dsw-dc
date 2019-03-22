@@ -19,6 +19,8 @@ services:
       - 80:80
     environment:
       - API_URL=http://localhost:3000
+    links:
+      - dsw_server
       
   dsw_server_worker:
     image: datastewardshipwizard/crontab
@@ -28,6 +30,8 @@ services:
       - ./config/worker-config.json:/opt/crontab/config.json
     environment:
       - API_URL=http://localhost:3000
+    links:
+      - dsw_server
 
   rabbitmq:
     image: rabbitmq

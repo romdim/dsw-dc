@@ -6,3 +6,6 @@ Following the steps of the [installation guide](https://docs.ds-wizard.org/insta
 Only skipped the dsw folder step. Everything enclosed within the root folder.
 
 When you run it for the first time, first run `docker-compose up` and then run the `import/public-questionnaire.sh` script to import the public questionnaire in your database, if you need it. If you ever remove the data folder then from your repo, you would need to run the same script again.
+This will result in running the apps in production mode.
+
+For development purposes, there is the `docker-compose.develop.yml` which you can run by: `docker-compose -f docker-compose.yml -f docker-compose.develop.yml up`.
