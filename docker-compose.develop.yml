@@ -5,3 +5,5 @@ services:
     build:
       context: ../dsw-client
       dockerfile: ../dsw-dc/config/client/Dockerfile
+    volumes:
+      - ../dsw-client/src:/dsw/src
